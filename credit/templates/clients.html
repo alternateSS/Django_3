@@ -10,9 +10,9 @@
 <body>
 
 <ul>
-{% for client in client_list %}
+{% for client in clients_list %}
 
-    <li><a>{{ client }}</a></li>
+        <li><a href="{% url 'detail' client.id %}">{{ client }}</a></li>
 
 {% endfor %}
 </ul>

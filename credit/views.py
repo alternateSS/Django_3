@@ -9,3 +9,10 @@ class ClientView(generic.ListView):
     template_name = 'clients.html'
     context_object_name = 'clients_list'
 
+
+class ClintDetailView(generic.DetailView):
+    model = Client
+    template_name = 'detail.html'
+    context_object_name = 'client'
+    pk_url_kwarg = 'id'
+
